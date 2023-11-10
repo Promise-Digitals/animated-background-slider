@@ -100,3 +100,14 @@
 .container #prev:hover, .container #next:hover{
     background: #333;
 }
+
+@media (max-width: 600px){
+    .container #next{
+        left: 0;
+        top: 50%;
+    }
+    .container #next{
+        right: 0;
+        top: 50%;
+    }
+}
