@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Animated Background Slider</title>
+</head>
+<body>
+    <div class="container">
+        <div class="slide-container active">
+            <div class="slide">
+                <div class="content">
+                    <h3>01. Website Layout</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias minima, quas sint nemo libero vel maxime minus omnis iusto aliquam rerum odio corrupti ipsum, eum consequuntur laborum. Magnam ducimus voluptates deserunt repellendus dolor, aspernatur atque et error laboriosam adipisci, non quos aliquam modi fugit hic voluptatum voluptas obcaecati harum voluptate!</p>
+                    <a href="#" class="btn">Learn more</a>
+                </div>
+                <div class="image">
+                    <img src="/images/image-1.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="slide-container">
+            <div class="slide">
+                <div class="content">
+                    <h3>02. Website Design</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias minima, quas sint nemo libero vel maxime minus omnis iusto aliquam rerum odio corrupti ipsum, eum consequuntur laborum. Magnam ducimus voluptates deserunt repellendus dolor, aspernatur atque et error laboriosam adipisci, non quos aliquam modi fugit hic voluptatum voluptas obcaecati harum voluptate!</p>
+                    <a href="#" class="btn">Learn more</a>
+                </div>
+                <div class="image">
+                    <img src="/images/image-2.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="slide-container">
+            <div class="slide">
+                <div class="content">
+                    <h3>03. Responsive Layouts</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias minima, quas sint nemo libero vel maxime minus omnis iusto aliquam rerum odio corrupti ipsum, eum consequuntur laborum. Magnam ducimus voluptates deserunt repellendus dolor, aspernatur atque et error laboriosam adipisci, non quos aliquam modi fugit hic voluptatum voluptas obcaecati harum voluptate!</p>
+                    <a href="#" class="btn">Learn more</a>
+                </div>
+                <div class="image">
+                    <img src="/images/image-3.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="slide-container">
+            <div class="slide">
+                <div class="content">
+                    <h3>04. Website Animations</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias minima, quas sint nemo libero vel maxime minus omnis iusto aliquam rerum odio corrupti ipsum, eum consequuntur laborum. Magnam ducimus voluptates deserunt repellendus dolor, aspernatur atque et error laboriosam adipisci, non quos aliquam modi fugit hic voluptatum voluptas obcaecati harum voluptate!</p>
+                    <a href="#" class="btn">Learn more</a>
+                </div>
+                <div class="image">
+                    <img src="/images/image-4.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div id="prev" onclick="prev()"> < </div>
+        <div id="next" onclick="next()"> > </div>
+    </div>
+
+    <script>
+        let slides = document.querySelectorAll(".slide-container");
+        let index = 0;
+
+        // next function
+        function next(){
+            slides[index].classList.remove("active");
+            index = (index + 1) % slides.length;
+            slides[index].classList.add("active");
+        }
+
+        // prev function
+        function prev(){
+            slides[index].classList.remove("active");
+            index = (index - 1 + slides.length) % slides.length;
+            slides[index].classList.add("active");
+        }
+
+        //autoplay
+        setInterval(next, 7000)
+    </script>
+</body>
+</html>
