@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: serif;
+    font-family: sans-serif;
 }
 .container{
     position: relative;
@@ -46,21 +46,23 @@
 }
 .container .slide-container .slide .content p{
     font-size: 16px;
-    color: #666;
+    color: #555;
+    text-align: justify;
     padding: 10px 0;
 }
 .container .slide-container .slide .content .btn{
     margin-top: 10px;
     display: inline-block;
-    background: #666;
+    background: #555;
     color: #fff;
-    font-size: 17px;
+    border-radius: 5px;
+    font-size: 15px;
     padding: 10px 40px;
     text-decoration: none;
     transition: 0.5s;
 }
 .container .slide-container .slide .content .btn:hover{
-    background: #333;
+    background: #222;
 }
 .container .slide-container{
     display: none;
@@ -69,25 +71,26 @@
     display: block;
 }
 .container .slide-container:nth-child(1) .slide{
-    background: linear-gradient(90deg,#f9f9f9 70%, #710193 30%);
+    background: linear-gradient(to bottom right,#f9f9f9 60%, #710193 40%);
 }
 .container .slide-container:nth-child(2) .slide{
-    background: linear-gradient(90deg,#f9f9f9 70%, #d0f0c0 30%);
+    background: linear-gradient(to bottom right,#f9f9f9 60%, #d0f0c0 40%);
 }
 .container .slide-container:nth-child(3) .slide{
-    background: linear-gradient(90deg,#f9f9f9 70%, #ffff99 30%);
+    background: linear-gradient(to bottom right,#f9f9f9 60%, #ffff99 40%);
 }
 .container .slide-container:nth-child(4) .slide{
-    background: linear-gradient(90deg,#f9f9f9 70%, #bc544b 30%);
+    background: linear-gradient(to bottom right,#f9f9f9 60%, #bc544b 40%);
 }
 .container #prev, .container #next{
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     color: #fff;
-    background: #666;
+    background: #555;
     height: 50px;
     width: 50px;
+    border-radius: 50%;
     line-height: 50px;
     font-size: 25px;
     text-align: center;
@@ -98,16 +101,16 @@
     right: 0;
 }
 .container #prev:hover, .container #next:hover{
-    background: #333;
+    background: #222;
 }
 
 @media (max-width: 600px){
-    .container #next{
-        left: 0;
+    .container #prev{
+        left: 1px;
         top: 50%;
     }
     .container #next{
-        right: 0;
+        right: 1px;
         top: 50%;
     }
 }
